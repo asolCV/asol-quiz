@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASOL: Test Inspektora Jakości</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Ekran Startowy -->
+        <div id="start-screen" class="screen active">
+            <img src="images/logo.png" alt="ASOL Logo" class="logo">
+            <h1>SYSTEM KONTROLI WIZYJNEJ ASOL</h1>
+            <h2>Test Kwalifikacyjny Inspektora</h2>
+            <p class="instruction">Przed Tobą 10 próbek wizyjnych. Twoim zadaniem jest sklasyfikowanie każdej z nich. System wymaga 100% skuteczności. Rozpocznij test.</p>
+            <button id="start-btn" class="btn">START TEST</button>
+        </div>
+
+        <!-- Ekran Quizu -->
+        <div id="quiz-screen" class="screen">
+            <p id="progress-text">PRÓBKA 1/10</p>
+            <div class="image-container">
+                <img src="" alt="Próbka wizyjna" id="quiz-image">
+            </div>
+            <div class="choice-container">
+                <button class="btn choice-btn" data-choice="correct">STAN PRAWIDŁOWY</button>
+                <button class="btn choice-btn" data-choice="anomalous">WYKRYTO ANOMALIĘ</button>
+            </div>
+        </div>
+
+        <!-- Ekran Wyników -->
+        <div id="result-screen" class="screen">
+            <h1>WYNIK TESTU KWALIFIKACYJNEGO</h1>
+            <h2 id="score-text">SKUTECZNOŚĆ: --%</h2>
+            <p id="feedback-text" class="feedback"></p>
+            <button id="restart-btn" class="btn">RESTART PROCEDURY</button>
+            <footer>
+                <a href="https://github.com/jacob-crown/asol-quiz" target="_blank">Zobacz szczegóły projektu ASOL</a>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
